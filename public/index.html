@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidate Search</title>
+    <style>
+      
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      
+      #root {
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+      }
+
+      
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        background-color: #0a043c;
+        box-sizing: border-box; 
+      }
+
+      /* Navbar links */
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        margin: 0 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        background-color: #444;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .navbar a {
+          font-size: 1rem;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0.2rem;
+        }
+
+        .navbar a {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+          padding: 0.5rem;
+          width: 100%; /* Make links take full width on small screens */
+        }
+      }
+
+      /* Ensure navbar links wrap appropriately if too long */
+      @media (max-width: 1200px) {
+        .navbar {
+          padding: 0.5rem;
+        }
+
+        .navbar a {
+          font-size: 1rem;
+          padding: 0.6rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/potential-candidates">Potential Candidates</a>
+      </div> 
+      <script type="module" src="/src/main.tsx"></script>
+    </div> 
+  </body>
+</html>

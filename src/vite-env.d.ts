@@ -1,0 +1,2 @@
+/// <reference types="vite/client" />
+VITE_GITHUB_TOKEN=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
